@@ -16,14 +16,14 @@ function Form({ route, method}) {
         setLoading(true);
         e.preventDefault();
         try {
-            const res = await api.post(`/api/${route}/`, { username, password });
+            const res = await api.post(route, { username, password });
             if (method === "login") {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
                 navigate("/")
             }
             else{
-                naviagte("/login")
+                navigate("/login")
             }
 
         } catch (error) {
@@ -60,3 +60,4 @@ function Form({ route, method}) {
     ) 
 }
 
+export default Form;

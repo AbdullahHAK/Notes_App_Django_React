@@ -25,14 +25,14 @@ function ProtectedRoute({children}) {
 
         } catch (error) {
             console.log(error);
-            setIsAuthenticated(false);
+            setIsAuthorized(false);
         }
     };
 
     const auth = async () => {
         const token = localStorage.getItem(ACCESS_TOKEN);
         if (!token) {
-            setIsAuthenticated(false);
+            setIsAuthorized(false);
             return;
         }
         const decoded = jwtDecode(token);
@@ -41,12 +41,12 @@ function ProtectedRoute({children}) {
         if (tokenExpiration < now) {
             await refreshToken();
         } else {
-            setIsAuthenticated(true);
+            setIsAuthorized(true);
         }
 
     }
 
-    if (isAuthotized === null) {
+    if (isAuthorized === null) {
         return <div>Loading...</div>
     }
 

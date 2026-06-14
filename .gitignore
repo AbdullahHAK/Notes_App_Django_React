@@ -1,0 +1,22 @@
+# Python virtual environment
+/myenv
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+backend/db.sqlite3
+backend/.env
+*.sqlite3
+backend/staticfiles/
+backend/media/
+
+# Environment variables
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
