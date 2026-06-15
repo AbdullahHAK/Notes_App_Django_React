@@ -11,7 +11,7 @@ api.interceptors.request.use(
         if (token) {
             config.headers['Authorization'] = `Bearer ${token}`;
         }
-        config.headers['Internal-Key'] = import.meta.env.VITE_CHOREO_KEY;
+        config.headers['Internal-Key'] = window.configs?.choreoKey;
         return config
     }
 )
