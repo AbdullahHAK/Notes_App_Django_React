@@ -2,17 +2,6 @@
 
 A full-stack notes management application with user authentication, built with Django REST Framework on the backend and React on the frontend. Deployed to production on WSO2 Choreo with a cloud PostgreSQL database.
 
----
-
-## Live Demo
-
-| Service | URL |
-|---|---|
-| Frontend | https://d8767784-8174-44b0-9ea8-591dcfa56a81-dev.e1-us-east-azure.choreoapps.dev |
-| Backend API | https://d8767784-8174-44b0-9ea8-591dcfa56a81-dev.e1-us-east-azure.choreoapis.dev/notesappdjangoreact/backend-vh/v1.0 |
-
----
-
 ## Features
 
 - User registration and login with JWT authentication
